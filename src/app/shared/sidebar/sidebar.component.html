@@ -1,0 +1,15 @@
+<!--sidebar-->
+<div class="bg-dark border-right p-3" id="sidebar">
+    <h2 class="text-light">{{appTitle}}</h2>
+    <hr class="text-white">
+    <div class="list-group list-reset">
+      <a 
+        *ngFor = "let hist of historial" 
+        href = "#" 
+        (click) = "buscar(hist)"
+        class = "list-group-item list-group-item-action">
+        {{hist | titlecase}}
+      </a>
+    </div>
+</div>
+<!--end sidebar-->
